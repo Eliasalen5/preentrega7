@@ -1,0 +1,38 @@
+{
+  "name": "turnos-preentrega7",
+  "version": "1.0.0",
+  "description": "API de turnos y reservas con MongoDB, Handlebars y Socket.io en tiempo real (Pre-entrega 7)",
+  "type": "module",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js"
+  },
+  "keywords": [
+    "node",
+    "esm",
+    "express",
+    "api",
+    "rest",
+    "mongodb",
+    "mongoose",
+    "handlebars",
+    "socket.io",
+    "layers",
+    "dao",
+    "repository",
+    "services",
+    "bookings",
+    "turnos",
+    "reservas"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-handlebars": "^7.1.2",
+    "mongoose": "^8.5.1",
+    "socket.io": "^4.7.5"
+  }
+}

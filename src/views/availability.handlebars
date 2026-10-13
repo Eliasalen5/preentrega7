@@ -1,0 +1,28 @@
+<section class="page-head">
+  <h2>Disponibilidad y Reservas</h2>
+  <button id="create-booking-btn" class="btn">Agregar reserva de ejemplo</button>
+</section>
+
+<div id="bookings-list" class="cards">
+  {{#each bookings}}
+    <article class="card booking-card" id="booking-{{id}}" data-id="{{id}}">
+      <h3>{{clientName}}</h3>
+      <p class="description">{{clientEmail}}</p>
+      <ul class="meta">
+        <li>Fecha: {{date}}</li>
+        <li>Hora: {{time}}</li>
+        <li>Estado: {{status}}</li>
+      </ul>
+      <p class="services-title">Servicios reservados:</p>
+      <ul class="meta">
+        {{#each services}}
+          <li>{{service.name}} x {{quantity}}</li>
+        {{else}}
+          <li>Sin servicios</li>
+        {{/each}}
+      </ul>
+    </article>
+  {{else}}
+    <p id="empty-bookings" class="empty">No hay reservas cargadas.</p>
+  {{/each}}
+</div>

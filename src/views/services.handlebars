@@ -1,0 +1,28 @@
+<section class="page-head">
+  <h2>Servicios</h2>
+  <button id="create-service-btn" class="btn">Agregar servicio de ejemplo</button>
+</section>
+
+<div id="services-list" class="cards">
+  {{#each services}}
+    <article class="card" id="service-{{id}}" data-id="{{id}}">
+      <h3>{{name}}</h3>
+      <p class="description">{{description}}</p>
+      <ul class="meta">
+        <li>Duración: {{duration}} min</li>
+        <li>Precio: ${{price}}</li>
+        <li>Categoría: {{category}}</li>
+        <li>
+          Disponibilidad:
+          {{#if available}}
+            <span class="badge available">Disponible</span>
+          {{else}}
+            <span class="badge unavailable">No disponible</span>
+          {{/if}}
+        </li>
+      </ul>
+    </article>
+  {{else}}
+    <p id="empty-services" class="empty">No hay servicios cargados.</p>
+  {{/each}}
+</div>
